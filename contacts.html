@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatti | Russo Coach</title>
+  <meta name="description" content="Contatta Russo Coach via email: inserisci email, oggetto e messaggio per iniziare il tuo percorso.">
+  <meta property="og:title" content="Contatti | Russo Coach">
+  <meta property="og:description" content="Invia una richiesta diretta a Russo Coach.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://example.com/contacts.html">
+  <!-- favicon: sostituire con /favicon.ico -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Intestazione contatti">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Torna alla home">russo.coach</a>
+      <a class="cta cta-small" href="index.html" aria-label="Torna alla landing">Torna alla landing</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero reveal" aria-labelledby="contact-title">
+      <div class="container narrow">
+        <p class="eyebrow">Contatto Diretto</p>
+        <h1 id="contact-title">Inizia il tuo percorso</h1>
+        <p class="lead">Compila il modulo. Si aprira il tuo client email con destinatario gia impostato su <strong>russo@ptrusso.it</strong>.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="from-email">La tua email</label>
+            <input id="from-email" name="from-email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="subject">Oggetto</label>
+            <input id="subject" name="subject" type="text" maxlength="120" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" rows="7" maxlength="2500" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="cta">Invia</button>
+            <a class="cta cta-outline" href="index.html">Annulla</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

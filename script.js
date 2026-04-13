@@ -58,3 +58,24 @@ firstFrameVideos.forEach((video) => {
   }
   video.addEventListener('loadeddata', () => setFirstFramePoster(video), { once: true });
 });
+
+const contactForm = document.querySelector('#contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const fromEmail = document.querySelector('#from-email')?.value.trim() || '';
+    const subject = document.querySelector('#subject')?.value.trim() || '';
+    const message = document.querySelector('#message')?.value.trim() || '';
+
+    if (!fromEmail || !subject || !message) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const body = `Email mittente: ${fromEmail}\n\nMessaggio:\n${message}`;
+    const mailto = `mailto:galbani_1999@yahoo.it?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+}
